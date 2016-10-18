@@ -6,18 +6,20 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 </head>
+
 <body ng-app="progressListApp">
 	<h1>To-Do Progress</h1>
 
-	<div class="list">
-		<input type="checkbox"/>
-		<label></label>
-		<input type="text"/>
-	</div>
-	<div class="actions">
-		<a href="">edit</a>
-		<a href="">save</a>
-		<a href="">delete</a>
+	<div ng-controller="mainCtrl" class="list">
+		<input ng-model="todo.completed" type="checkbox"/>
+		<label ng-hide="editing" class="edit">{{todo.name}}</label>
+		<input ng-show="editing" ng-model="todo.name" class="edit" type="text"/>
+
+		<div class="actions">
+			<a href="" ng-click="editing = true">edit</a>
+			<a href="" ng-click="editing = false">save</a>
+			<a href="">delete</a>
+		</div>
 	</div>
 </body>
 </html>

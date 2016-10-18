@@ -1,1 +1,4 @@
-angular.module("progressListApp", []);
+angular.module("progressListApp", [])
+	.controller('mainCtrl', function($scope) {
+		
+	});

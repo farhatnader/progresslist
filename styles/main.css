@@ -1,0 +1,10 @@
+.editing-content {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-shadow: teal;
+}
+
+.edited-content {
+	color: teal;
+	font-weight: bold;
+}

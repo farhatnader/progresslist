@@ -11,10 +11,10 @@
 	<h1>To-Do Progress</h1>
 
 	<div ng-controller="mainCtrl" class="list">
-		<div ng-repeat="todo in todos">
+		<div ng-repeat="todo in todos" ng-class="{'editing-content': editing}">
 			<input ng-model="todo.completed" type="checkbox"/>
-			<label ng-hide="editing" class="edit">{{todo.name}}</label>
-			<input ng-show="editing" ng-model="todo.name" class="edit" type="text"/>
+			<label ng-hide="editing" ng-class="{'edited-content': todo.edited}" class="edit">{{todo.name}}</label>
+			<input ng-show="editing" ng-change="todo.edited = true" ng-blur="editing = false" ng-model="todo.name" class="edit" type="text"/>
 
 			<div class="actions">
 				<a href="" ng-click="editing = true">edit</a>

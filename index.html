@@ -11,16 +11,20 @@
 	<h1>To-Do Progress</h1>
 
 	<div ng-controller="mainCtrl" class="list">
-		<div ng-repeat="todo in todos" ng-class="{'editing-content': editing}">
-			<input ng-model="todo.completed" type="checkbox"/>
-			<label ng-hide="editing" ng-class="{'edited-content': todo.edited}" class="edit">{{todo.name}}</label>
-			<input ng-show="editing" ng-change="todo.edited = true" ng-blur="editing = false" ng-model="todo.name" class="edit" type="text"/>
+		<div ng-repeat="task in tasks" ng-class="{'editing-content': editing}">
+			<input ng-model="task.completed" type="checkbox"/>
+			<label ng-hide="editing" ng-class="{'edited-content': task.edited}" class="edit">{{task.name}}</label>
+			<input ng-show="editing" ng-change="task.edited = true" ng-blur="editing = false" ng-model="task.name" class="edit" type="text"/>
 
 			<div class="actions">
 				<a href="" ng-click="editing = true">edit</a>
-				<a href="" ng-click="editing = false">save</a>
-				<a href="">delete</a>
+				<a href="" ng-click="editing = false; saveTask(task)">save</a>
+				<a href="" ng-click="deleteTask(task, $index)">delete</a>
 			</div>
+		</div>
+		<br>
+		<div class="add">
+			<input type="button" ng-click="addTask()" name="new-task" value="+"/>
 		</div>
 	</div>
 </body>

@@ -11,8 +11,11 @@ angular.module('progressListApp')
 		$scope.tasks.splice(index, 1);
 	}
 
-	$scope.saveTask = function(task) {
-		dataService.saveTask(task);
+	$scope.saveTasks = function() {
+		var editedTasks = $scope.tasks.filter(function(task) {
+			return task.edited == true;
+		})
+		dataService.saveTasks(editedTasks);
 	}
 
 	$scope.addTask = function() {

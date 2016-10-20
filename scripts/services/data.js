@@ -11,7 +11,7 @@ angular.module('progressListApp')
 		console.log("The '" + task.name + "' has been deleted.")
 	}
 
-	this.saveTask = function(task) {
-		console.log("The '" + task.name + "' has been saved.")
+	this.saveTasks = function(tasksEdited) {
+		console.log(tasksEdited.length + " tasks have been saved.")
 	}
 });

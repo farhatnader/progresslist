@@ -8,3 +8,8 @@
 	color: teal;
 	font-weight: bold;
 }
+
+.completed-content {
+	color: grey;
+	text-decoration: line-through;
+}

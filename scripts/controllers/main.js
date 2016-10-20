@@ -17,6 +17,6 @@ angular.module('progressListApp')
 
 	$scope.addTask = function() {
 		var task = {name: "Edit new task"};
-		$scope.tasks.push(task);
+		$scope.tasks.unshift(task);
 	}
 });

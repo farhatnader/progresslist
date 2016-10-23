@@ -1,10 +1,6 @@
 'use strict';
 
 myModule.controller('mainCtrl', function($scope, dataService) {
-	// dataService.getTasks(function(response) {
-	// 	$scope.tasks = response.data;
-	// });
-
 	$scope.tasks = dataService.getStoredTasks();
 
 	$scope.deleteTask = function(task, index) {
@@ -13,11 +9,11 @@ myModule.controller('mainCtrl', function($scope, dataService) {
 	}
 
 	$scope.saveTask = function(task) {
-		// var editedTasks = $scope.tasks.filter(function(task) {
-		// 	return task.edited == true;
-		// })
-		// dataService.saveTasks(editedTasks);
 		dataService.saveTask(task);
+	}
+
+	$scope.saveTasks = function() {
+		dataService.saveTasks($scope.tasks);
 	}
 
 	$scope.addTask = function() {

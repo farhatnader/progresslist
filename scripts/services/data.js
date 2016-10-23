@@ -27,8 +27,22 @@ myModule.service('dataService', function($cookies) {
 		$cookies.remove(task.id)
 	}
 
+	function saveTask(taskObj) {
+		console.log("The task '" + taskObj.name + "' has been saved");
+		$cookies.putObject(taskObj.id, taskObj);
+	}
+
 	this.saveTask = function(task) {
-		console.log("The task '" + task.name + "' has been saved");
-		$cookies.putObject(task.id, task);
+		saveTask(task);
+	}
+
+	this.saveTasks = function(tasks) {
+		console.log(tasks);
+		tasks.forEach(function(task) {
+			console.log(task);
+			if (task.edited == true) {
+				saveTask(task);
+			}
+		})
 	}
 });

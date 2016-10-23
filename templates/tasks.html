@@ -1,16 +1,16 @@
 <div class="list">
-	<div ng-repeat="task in tasks | orderBy: 'completed'" ng-init="task.completed = false" ng-class="{'editing-content': editing, 'completed-content': task.completed}">
+	<div ng-repeat="task in tasks | orderBy: 'completed'" ng-init="task.completed = (task.completed == true) ? true : false;" ng-class="{'editing-content': editing, 'completed-content': task.completed}">
 		<input ng-model="task.completed" ng-click="task.edited = true" type="checkbox"/>
 		<label ng-hide="editing" ng-click="editing = true" ng-class="{'edited-content': task.edited}" class="edit">{{task.name}}</label>
 		<input ng-show="editing" ng-change="task.edited = true" ng-blur="editing = false" ng-model="task.name" class="edit" type="text"/>
 
 		<div class="actions">
 			<a href="" ng-click="editing = true">edit</a>
-			<a href="" ng-click="editing = false; saveTasks()">save</a>
+			<a href="" ng-click="editing = false; saveTask(task)">save</a>
 			<a href="" ng-click="deleteTask(task, $index)">delete</a>
 		</div>
 	</div>
-	<br>
+	<br/>
 	<div class="add">
 		<input type="button" ng-click="addTask()" name="new-task" value="+"/>
 	</div>

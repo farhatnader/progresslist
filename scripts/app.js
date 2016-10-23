@@ -1,1 +1,1 @@
-angular.module('progressListApp', []);
+var myModule = angular.module('progressListApp', ['ngCookies']);

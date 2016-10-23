@@ -1,5 +1,6 @@
-angular.module('progressListApp')
-.directive('tasks', function() {
+'use strict'
+
+myModule.directive('tasks', function() {
 	return {
 		templateUrl: 'templates/tasks.html',
 		controller: 'mainCtrl'

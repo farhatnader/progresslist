@@ -1,3 +1,61 @@
+#main {
+	width: 800px;
+	margin: 0 auto;
+	font-size: 20px;
+	font-family: 'Hind Guntur', sans-serif;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+#title {
+	width: inherit;
+	height: 80px;
+	line-height: 100px;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #6C7A89;
+	color: #FFFFFF;
+}
+
+.task {
+	width: inherit;
+	height: 40px;
+	padding-top: 10px;
+	padding-right: 5px;
+	margin-bottom: 15px;
+	background-color: #95A5A6;
+
+}
+
+.checkbox, .item, .edit-field {
+	float: left;
+}
+
+.item, .edit-field {
+	/*width: 600px;*/
+	/*line-height: 1.2;*/
+}
+
+.item {
+	color: #FFFFFF;
+}
+
+/*.checkbox-div, .item-div {
+	float: left;
+}
+
+.item-div {
+	width: 600px;
+	line-height: 1.2;
+}*/
+
+.actions {
+	float: right;
+}
+
 .editing-content {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -6,10 +64,14 @@
 
 .edited-content {
 	color: teal;
-	font-weight: bold;
 }
 
 .completed-content {
 	color: grey;
-	text-decoration: line-through;
+	/*text-decoration: line-through;*/
+}
+
+.configure {
+	float: none;
+	text-align: center;
 }

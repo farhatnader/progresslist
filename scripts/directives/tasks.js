@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 myModule.directive('tasks', function() {
 	return {

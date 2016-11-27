@@ -4,7 +4,7 @@
 			<input class="checkbox" ng-model="task.completed" ng-click="task.edited = true" type="checkbox"/>
 		<!-- </div> -->
 		<!-- <div class="item-div"> -->
-			<label class="item" ng-hide="editing" ng-click="editing = true" ng-class="{'edited-content': task.edited, 'completed-content': task.completed}">{{task.name}}</label>
+			<label class="task-label" ng-hide="editing" ng-click="editing = true" ng-class="{'edited-content': task.edited, 'completed-content': task.completed}">{{task.name}}</label>
 			<input class="edit-field" type="text" maxlength="60" ng-model="task.name" ng-show="editing" ng-change="task.edited = true" ng-blur="editing = false"/>
 		<!-- </div> -->
 		<div class="actions">

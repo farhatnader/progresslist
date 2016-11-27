@@ -24,22 +24,22 @@ h1 {
 	width: inherit;
 	height: 40px;
 	padding-top: 10px;
-	padding-right: 5px;
+	padding-right: 15px;
+	padding-left: 10px;
 	margin-bottom: 15px;
 	background-color: #95A5A6;
-
 }
 
-.checkbox, .item, .edit-field {
+.checkbox, .task-label, .edit-field {
 	float: left;
 }
 
-.item, .edit-field {
+.task-label, .edit-field {
 	/*width: 600px;*/
 	/*line-height: 1.2;*/
 }
 
-.item {
+.task-label {
 	color: #FFFFFF;
 }
 
